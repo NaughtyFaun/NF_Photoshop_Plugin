@@ -4,7 +4,7 @@ A collection of tools I wrote by fevereshly googling how to do things I need in 
 To make it work put it into your `Photoshop [version]/Presets/Scripts` folder.
 
 Structure is pretty straightforward (so future me can pick it up easier):
-* **lib** folder contains some helpers and wrappers. All you need is to add this line `#include 'lib/nf_include_this.js'`;
+* **lib** folder contains some helpers and wrappers. All you need is to add this line `#include 'lib/nf_include_this.js'` at the top of the script and you'll have `app.nf.` scope to access everything;
 * each file outside **lib** folder represents a tool that can be accessed under "Filter" menu;
 * every feature is placed under `app.nf.` "namespace";
 * `nf_script_template.js` contains a tamplate for new tools.
