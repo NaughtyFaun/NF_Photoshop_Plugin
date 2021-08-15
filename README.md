@@ -19,7 +19,7 @@ Writing PS scripts is much harder than it should be, so lib contains methods lik
 
 ## nf_freq.js
 
-Image frequency separation tool. Select a layer, hit the tool. It nicely handles nested layers and always put generated layers next to the one selected. If something fails, just try to run it again, chanses are tool will clean up previous attempt.
+Image frequency separation tool. Select a layer, hit the tool. It nicely handles nested layers and always put generated layers next to the one selected. If something fails, just try to run it again, chances are tool will clean up previous attempt.
 
 ## nf_shadow_light_vivid.js
 
