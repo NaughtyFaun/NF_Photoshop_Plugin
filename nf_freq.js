@@ -2,9 +2,7 @@
 
 #include 'lib/nf_include_this.js'
 
-///
-/// Create an object and call run() several times
-///
+
 app.nf.Freq = function(layerOrig)
 {
     this.blurSuffix  = " low"
