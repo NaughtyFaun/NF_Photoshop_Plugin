@@ -14,7 +14,7 @@ Writing PS scripts is much harder than it should be, so lib contains methods lik
   * *app.nf.layerToSmartObject*
   * *app.nf.setLayerTagColor*
   * *app.nf.findLayerOrSet* (recursive search by layer name as first argument and list of layers to start from as second)
-  * *app.nf.executeNoHistory* (so you can undo whole script by just single Undo operation)
+  * *app.nf.executeNoHistory* (so you can undo whole script by just single Undo operation. Take that, ACTIONS!!)
   * etc.
 
 ## nf_freq.js
