@@ -28,10 +28,10 @@ app.nf.FreqSetup = function(layerOrig)
 
 app.nf.FreqSetup.prototype.initialize = function()
 {
-    this.grp       = app.nf.findLayerOrSet(this.grpName, this.layerOrig.parent.layers)
+    this.grp       = app.nf.findLayerOrGroup(this.grpName, this.layerOrig.parent.layers)
     var layers     = this.grp ? this.grp.layers : undefined
-    this.layerBlur = app.nf.findLayerOrSet(this.blurName, layers)
-    this.layerLL   = app.nf.findLayerOrSet(this.llName, layers)
+    this.layerBlur = app.nf.findLayerOrGroup(this.blurName, layers)
+    this.layerLL   = app.nf.findLayerOrGroup(this.llName, layers)
 }
 
 
@@ -101,7 +101,7 @@ app.nf.FreqSetup.prototype.createLayers = function()
         this.doc.activeLayer = this.layerOrig
         app.nf.layerToSmartObject(this.layerOrig)
 
-        this.doc.activeLayer = app.nf.findLayerOrSet(this.origName, parent.layers)
+        this.doc.activeLayer = app.nf.findLayerOrGroup(this.origName, parent.layers)
         this.layerOrig = this.doc.activeLayer
     }
     
