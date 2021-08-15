@@ -3,11 +3,19 @@
 A collection of tools I wrote by fevereshly googling how to do things I need in an automated way.
 To make it work put it into your `Photoshop [version]/Presets/Scripts` folder.
 
-Structure is pretty straight forward (so future me can pick it up easier):
+Structure is pretty straightforward (so future me can pick it up easier):
 * **lib** folder contains some helpers and wrappers. All you need is to add this line `#include 'lib/nf_include_this.js'`;
 * each file outside **lib** folder represents a tool that can be accessed under "Filter" menu;
+* every feature is placed under `app.nf.` "namespace";
 * `nf_script_template.js` contains a tamplate for new tools.
 
+## lib folder
+Writing PS scripts is much harder than it should be, so lib contains methods like:
+  * *app.nf.layerToSmartObject*
+  * *app.nf.setLayerTagColor*
+  * *app.nf.findLayerOrSet* (recursive search by layer name as first argument and list of layers to start from as second)
+  * *app.nf.executeNoHistory* (so you can undo whole script by just single Undo operation)
+  * etc.
 
 ## nf_freq.js
 
