@@ -17,7 +17,7 @@ Writing PS scripts is much harder than it should be, so lib contains methods lik
   * *app.nf.executeNoHistory* (so you can undo whole script by just single Undo operation. Take that, ACTIONS!!)
   * etc.
 
-## nf_freq.js
+## nf_setup_freq.js
 
 Image frequency separation tool. Select a layer, hit the tool. It nicely handles nested layers and always put generated layers next to the one selected. If something fails, just try to run it again, chances are tool will clean up previous attempt.
 
