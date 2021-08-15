@@ -1,7 +1,7 @@
 # Photoshop Plugin (JS)
 
 A collection of tools I wrote by fevereshly googling how to do things I need in an automated way.
-To make it work put it into your `Photoshop/Presets/Scripts` folder.
+To make it work put it into your `Photoshop [version]/Presets/Scripts` folder.
 
 Structure is pretty straight forward (so future me can pick it up easier):
 * **lib** folder contains some helpers and wrappers. All you need is to add this line `#include 'lib/nf_include_this.js'`;
