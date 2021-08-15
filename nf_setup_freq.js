@@ -3,7 +3,7 @@
 #include 'lib/nf_include_this.js'
 
 
-app.nf.Freq = function(layerOrig)
+app.nf.FreqSetup = function(layerOrig)
 {
     this.blurSuffix  = " low"
     this.llSuffix    = " high"
@@ -26,7 +26,7 @@ app.nf.Freq = function(layerOrig)
     this.initialize()
 }
 
-app.nf.Freq.prototype.initialize = function()
+app.nf.FreqSetup.prototype.initialize = function()
 {
     this.grp       = app.nf.findLayerOrSet(this.grpName, this.layerOrig.parent.layers)
     var layers     = this.grp ? this.grp.layers : undefined
@@ -35,7 +35,7 @@ app.nf.Freq.prototype.initialize = function()
 }
 
 
-app.nf.Freq.prototype.run = function()
+app.nf.FreqSetup.prototype.run = function()
 {
     if (this.layerOrig.isBackgroundLayer)
     {
@@ -70,14 +70,14 @@ app.nf.Freq.prototype.run = function()
     app.nf.debugMarkerRemove(this.debugName)
 }
 
-app.nf.Freq.prototype.isCleared = function()
+app.nf.FreqSetup.prototype.isCleared = function()
 {
     return this.layerBlur == undefined && 
            this.layerLL == undefined && 
            this.grp == undefined
 }
 
-app.nf.Freq.prototype.clearSetup = function()
+app.nf.FreqSetup.prototype.clearSetup = function()
 {
     app.nf.debugMarkerRemove(this.debugName)
 
@@ -90,7 +90,7 @@ app.nf.Freq.prototype.clearSetup = function()
     this.grp       = undefined
 }
 
-app.nf.Freq.prototype.createLayers = function()
+app.nf.FreqSetup.prototype.createLayers = function()
 {
     var parent = this.layerOrig.parent
 
@@ -130,7 +130,7 @@ app.nf.Freq.prototype.createLayers = function()
  */
 function RunFreq()
 {
-    var freq = new app.nf.Freq(app.activeDocument.activeLayer)
+    var freq = new app.nf.FreqSetup(app.activeDocument.activeLayer)
     freq.run()
 }
 app.nf.executeNoHistory(RunFreq)
