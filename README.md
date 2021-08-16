@@ -24,3 +24,8 @@ Image frequency separation tool. Select a layer, hit the tool. It nicely handles
 ## nf_shadow_light_vivid.js
 
 Adds `softlight` and `multiply` layers next to selected one. Hold CTRL to add layers below selected. Hold SHIFT to also add `vividlight` layer along with others.
+
+## nf_setup_embed.js
+
+Most images that are added into original require a setup and is mostly identical for any such embedded image.
+This script will do the boilerplate heavy lifting.
