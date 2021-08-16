@@ -19,13 +19,13 @@ app.nf.ClassName.prototype.run = function()
 }
 
 
-///*
-    // <javascriptresource>
-    //     <name>Menu item name</name>
-    //     <menu>filter</menu>
-    //     <category>NF</category>
-    // </javascriptresource>
-// */
+//
+// </javascriptresource>
+//     <name>Menu item name</name>
+//     <menu>filter</menu>
+//     <category>NF</category>
+// </javascriptresource>
+//
 function RunClassName()
 {
     var obj = new app.nf.ClassName(app.activeDocument.activeLayer)
