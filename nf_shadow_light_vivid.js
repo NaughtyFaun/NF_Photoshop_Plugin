@@ -32,16 +32,19 @@ app.nf.ShadowLight.prototype.run = function()
 
 app.nf.ShadowLight.prototype.createLayers = function(hasVivid, isAfter)
 {
-    var lastCreatedLayer;
+    var lastCreatedLayer = this.layerTarget;
 
     var shadow = this.layerTarget.parent.artLayers.add()
     shadow.name = this.shadowName
     shadow.blendMode = BlendMode.MULTIPLY
+    shadow.move(lastCreatedLayer, ElementPlacement.PLACEBEFORE)
     app.nf.setLayerTagColor(shadow, LayerTagColor.VIOLET)
+    lastCreatedLayer = shadow
 
     var light = this.layerTarget.parent.artLayers.add()
     light.name = this.lightName
     light.blendMode = BlendMode.SOFTLIGHT
+    light.move(lastCreatedLayer, ElementPlacement.PLACEBEFORE)
     app.nf.setLayerTagColor(light, LayerTagColor.ORANGE)
     lastCreatedLayer = light
 
@@ -49,6 +52,7 @@ app.nf.ShadowLight.prototype.createLayers = function(hasVivid, isAfter)
         var vivid = this.layerTarget.parent.artLayers.add()
         vivid.name = this.vividName
         vivid.blendMode = BlendMode.VIVIDLIGHT
+        vivid.move(lastCreatedLayer, ElementPlacement.PLACEBEFORE)
         app.nf.setLayerTagColor(vivid, LayerTagColor.YELLOW)
         lastCreatedLayer = vivid
     }
