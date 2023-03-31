@@ -29,3 +29,7 @@ Adds `softlight` and `multiply` layers next to selected one. Hold CTRL to add la
 
 Most images that are added into original require a setup and is mostly identical for any such embedded image.
 This script will do the boilerplate heavy lifting.
+
+## nf_export_frames.js
+
+Shows dialog to select export folder, setup prefix and then export all the top groups of the file as separate png images, that have their names as prefixed group names. 
